@@ -21,7 +21,7 @@ function App() {
           3ngow4iojto24jt943htg
           wngio24hgoijgopiwg54
         </div>
-        <div className="interface w-1/2 h-1/2 border gap-4">
+        <div className="interface w-2 h-1/2 border gap-4">
           wioi4wghi4ogioerjg
           ngwiot3ji4ojgiporjg
           wohegi4wogjiregji4pewg
