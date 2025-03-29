@@ -3,4 +3,4 @@
 #!/bin/bash
 export FLASK_APP=backend/__init__
 export FLASK_ENV=production
-gunicorn --bind 0.0.0.0:$PORT --log-level debug backend:init.app
+PYTHONPATH=backend gunicorn --bind 0.0.0.0:$PORT backend.__init__:app
