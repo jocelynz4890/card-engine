@@ -10,5 +10,6 @@ def term_rank(p):
     
 def expr_term(p):
     'expr : term'
+
 def stmt_assign(p):
     'stmt : INDENT ID ASSIGN expr N'
