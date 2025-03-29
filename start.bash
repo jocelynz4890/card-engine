@@ -3,4 +3,4 @@
 #!/bin/bash
 export FLASK_APP=backend/__init__
 export FLASK_ENV=production
-flask run --host=0.0.0.0 --port=$PORT
+gunicorn --bind 0.0.0.0:$PORT backend.__init__:app
