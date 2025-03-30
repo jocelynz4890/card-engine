@@ -1,9 +1,12 @@
-import { useState } from 'react'
-import './App.css'
-import CardList from './components/CardList'
-const generateCardUrl = "https://web-production-29623.up.railway.app/generate_deck"
+import { useState } from 'react';
+import './App.css';
+import CardList from './components/CardList';
+import ClipLoader from "react-spinners/ClipLoader";
+
+const generateCardUrl = "https://web-production-29623.up.railway.app/generate_deck";
 function App() {
   const [prompt, setPrompt] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
   // const [obj, setObj] = useState({"cards":[]}); 
   let obj = {
     "cards": [
@@ -51,10 +54,11 @@ function App() {
   }
 
   async function handleSubmit(e) {
+    setIsLoading(true);
     setObj(JSON.parse(await fetch(generateCardUrl, {
       method: 'POST',
       body: prompt
-    })));
+    }).then(()=>setIsLoading(false))));
   }
   function handleEdit(e) {
     setPrompt(e.target.value);
@@ -69,6 +73,7 @@ function App() {
           <input type = "submit" value ="Submit"></input>
           </form>
         </span>
+        <ClipLoader color={"rgb(185, 185, 185)"} loading={isLoading}></ClipLoader>
         {obj.cards.length > 0 ? <div className= "flex flex-row items-start w-1/2 h-1/2 flex-row gap-4">
         <CardList json={obj}></CardList>
         <button style={{ "margin": 4 }}>Export</button>
