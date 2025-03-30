@@ -44,7 +44,7 @@
 
 /* Style the front side */
 .flip-card-front {
-  background-color: rgb(123, 154, 185);
+  background-color: rgb(215, 212, 191);
   color: black;
 }
 
@@ -88,7 +88,7 @@
 .flip-card-front {
   text-align: center;
   margin: 0 auto;
-  background-color: rgb(123, 154, 185);
+  background-color: rgb(215, 212, 191);
   color: black;
 }
 
@@ -96,7 +96,7 @@
 .flip-card-back {
   text-align: center;
   margin: 0 auto;
-  background-color: rgb(123, 154, 185);
+  background-color: rgb(215, 212, 191);
   color: black;
   transform: rotateY(180deg);
 } 
