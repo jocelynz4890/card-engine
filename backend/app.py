@@ -12,6 +12,10 @@ CORS(app)
 load_dotenv()
 model = OpenAI(base_url="https://api.perplexity.ai")
 
+@app.route("/")
+def Home():
+    return "Hello this is my dog the backend"
+
 @app.route("/generate_deck", methods = ["POST"])
 def GenerateDeck():
     '''
