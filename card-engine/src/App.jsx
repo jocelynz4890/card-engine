@@ -63,16 +63,16 @@ function App() {
     <div className="w-max h-max p-4">
       <h1 className="text-3xl font-bold mt-0 mb-4"> ♣️ 🂡 ♥️ Custom Card Engine ♦️ 🂡 ♠️ </h1>
       <hr></hr>
-      <span>
+      <span style = {{"margin" : "15px"}}>
           <form onSubmit = {handleSubmit}>
            <input name = "prompt" onChange={handleEdit}></input>
           <input type = "submit" value ="Submit"></input>
           </form>
         </span>
-      <div className= "flex flex-row items-start w-1/2 h-1/2 flex-row gap-4">
+        {obj.cards.length > 0 ? <div className= "flex flex-row items-start w-1/2 h-1/2 flex-row gap-4">
         <CardList json={obj}></CardList>
         <button style={{ "margin": 4 }}>Export</button>
-      </div>
+      </div> : <></>}
     </div>
   )
 }
