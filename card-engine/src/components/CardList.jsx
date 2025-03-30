@@ -18,6 +18,15 @@ function CardList(props) {
         }))
     );
 
+    // just pass in the cards list but make sure to add useeffect on it so it re-renders
+    // didn't use since don't know where to put shuffle button
+    function shuffleArray(array) {
+        return array
+            .map(value => ({ value, sort: Math.random() }))
+            .sort((a, b) => a.sort - b.sort)
+            .map(({ value }) => value);
+    }
+
     useEffect(()=>{
         setCards(props.json.cards.map(texts => ({
             color: "default",

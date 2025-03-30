@@ -12,6 +12,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(false);
   const [obj, setObj] = useState({"cards":[]}); 
   const [generatedKey, setGeneratedKey] = useState("");
+
   useEffect(() => {
     async function f() {
       let key = (new URLSearchParams(window.location.search)).get("key");
