@@ -1,14 +1,21 @@
-# React + Vite
+# 🂡 Custom Card Engine 🂡
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Access the website at https://card-engine.vercel.app/.
 
-Currently, two official plugins are available:
+## Features ✅
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+♥️ Generate a set of flashcards of any topic, each with a front and back
+♦️ Practice or just browse them for fun
+♣️ Send your generated flashcards to friends
 
-## Expanding the ESLint configuration
+## Applications 🔨📝
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-
-run backend with: flask --app backend run
+♦️ Send funny card decks to friends
+♥️ Study any topic you want
+♣️ Create personalized quiz games for parties or study groups
+♠️ Brainstorm ideas or prompts for writing and creativity
+♥️ Memorize key facts for exams or presentations
+♦️ Learn a new language with custom vocabulary decks
+♣️ Challenge friends with trivia or puzzle cards
+♠️ Teach concepts interactively in classrooms or workshops
+♥️ Create icebreaker games for social gatherings
