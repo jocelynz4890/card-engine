@@ -27,9 +27,9 @@ def GenerateDeck():
         {"cards" : [{"front": "front of card 1", "back" : "back of card 1"}, {...}, ...], "key" : "asflk5wr34234rsv"}
         key is used in GetDeck to get the same cards again.
     '''
-    # print(request.form)
-    # print(request.form["prompt"])
-    userPrompt = request.form["prompt"]
+    print(request.get_json())
+    userPrompt = request.get_json()["prompt"]
+    print(f"user prompt {userPrompt}")
     if len(userPrompt) > 2000:
         raise Exception("Message too long. Please keep prompt under 2000 characters.")
     def queryModel(sysPrompt, userPrompt):
