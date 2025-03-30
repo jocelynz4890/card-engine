@@ -99,7 +99,7 @@ function App() {
     <div className="w-max h-max p-1">
       <h1 className="text-3xl font-bold mt-0 mb-4"> ♣️ 🂡 ♥️ Custom Card Engine ♦️ 🂡 ♠️ </h1>
       <hr></hr>
-      <span style = {{"margin" : "15px"}}>
+      <span style = {{"line-height" : 80}}>
           <input name = "prompt" placeholder = "e.g. Quiz me on biochemistry" onChange={handleEdit}></input>
           <button onClick={handleSubmit}>Submit</button>
           {obj.cards.length > 0 ? <button onClick={()=>copyToClipboard(generatedKey)}>Share</button> : <></>}
