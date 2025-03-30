@@ -14,7 +14,7 @@ model = OpenAI(base_url="https://api.perplexity.ai")
 
 @app.route("/")
 def Home():
-    return "Hello this is my dog the backend"
+    return "Hello this is my dog the backend, active decks are " + str(cache.keys())
 
 @app.route("/generate_deck", methods = ["POST"])
 def GenerateDeck():
