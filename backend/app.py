@@ -48,6 +48,7 @@ def GenerateDeck():
                      "If the user requests more than 100 elements, limit the number of elements to 100. If the user does not specify their desired number "
                      "of flash cards, output an array of 20 flash cards. The user will give you a topic and/or the number of flash cards to generate. "
                      "You will generate flash cards that will have a variety of good questions to help the user study. "
+                     "Give the cards in a random order. "
                      "If the topic is unspecified, pick a random topic and output flash cards relating to it. Again, it's extremely important that the JSON Array follows the above format.")
     cards : str = queryModel(sysPrompt, userPrompt)
     global cache
