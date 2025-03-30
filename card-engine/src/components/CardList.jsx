@@ -1,5 +1,5 @@
 import Card from "./Card";
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 function CardList(props) {
     // props.json is a json of the form "cards": [{"front": String, "back": String}, etc]
@@ -17,6 +17,15 @@ function CardList(props) {
             back_text: texts.back
         }))
     );
+
+    useEffect(()=>{
+        setCards(props.json.cards.map(texts => ({
+            color: "default",
+            front_text: texts.front,
+            back_text: texts.back
+        }))); 
+        setIdx(1);
+    }, [props.json]);
 
     const colorMap = {
         default:"rgb(255, 255, 255)",
