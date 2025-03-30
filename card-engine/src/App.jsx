@@ -94,17 +94,18 @@ function App() {
     // console.log(e.target.value);
   }
   return (
-    <div className="w-max h-max p-4">
+    <div className="w-max h-max p-1">
       <h1 className="text-3xl font-bold mt-0 mb-4"> ♣️ 🂡 ♥️ Custom Card Engine ♦️ 🂡 ♠️ </h1>
       <hr></hr>
       <span style = {{"margin" : "15px"}}>
           <input name = "prompt" onChange={handleEdit}></input>
           <button onClick={handleSubmit}>Submit</button>
+          {obj.cards.length > 0 ? <button onClick={()=>copyToClipboard(generatedKey)}>Share</button> : <></>}
         </span>
         <ClipLoader color={"rgb(185, 185, 185)"} loading={isLoading}></ClipLoader>
         {obj.cards.length > 0 ? <div className= "flex flex-row items-start w-1/2 h-1/2 flex-row gap-4">
         <CardList json={obj}></CardList>
-        <button style={{ "margin": 4 }} onClick={()=>copyToClipboard(generatedKey)}>Export</button>
+        
       </div> : <></>}
     </div>
   )
