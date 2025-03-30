@@ -16,7 +16,9 @@ function App() {
     async function f() {
       let key = (new URLSearchParams(window.location.search)).get("key");
       if (key != null) {
-        let cards = await (await fetch(getOldDeckUrl + `/${key}`)).json()
+        let res = (await fetch(getOldDeckUrl + `/${key}`))
+        console.log(res)
+        let cards = await res.json()
         console.log(cards)
         setObj(cards);
       }}
@@ -98,7 +100,7 @@ function App() {
       <h1 className="text-3xl font-bold mt-0 mb-4"> ♣️ 🂡 ♥️ Custom Card Engine ♦️ 🂡 ♠️ </h1>
       <hr></hr>
       <span style = {{"line-height" : 80}}>
-          <input name = "prompt" onChange={handleEdit}></input>
+          <input name = "prompt" placeholder = "e.g. Quiz me on biochemistry" onChange={handleEdit}></input>
           <button onClick={handleSubmit}>Submit</button>
           {obj.cards.length > 0 ? <button onClick={()=>copyToClipboard(generatedKey)}>Share</button> : <></>}
         </span>
